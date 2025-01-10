@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Sanae Ahjoub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <div class="logo">
+      <span class="sanae">Sanae</span>
+      <span class="ahjoub">Ahjoub</span>
+    </div>
+    <div class="menu-icon" id="menu-icon">
+      <i class="fas fa-bars"></i> 
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#accueil">Accueil</a></li>
+      <li><a href="#apropos">À propos</a></li>  
+      <li><a href="#projets">Projets</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="mode-toggle" id="mode-toggle">
+      <i class="fas fa-moon"></i> 
+    </div>
+  </nav>
+  <section id="accueil">
+    <div class="accueil-content">
+      <div class="texte">
+        <h1>
+          <span class="lettre">S</span>
+          <span class="lettre">a</span>
+          <span class="lettre">n</span>
+          <span class="lettre">a</span>
+          <span class="lettre">e</span>
+        </h1>
+        <p>Développeuse passionnée par le design 3D et l'innovation.</p>
+        <a href="#apropos" class="btn">En savoir plus</a>
+        <a href="cv/sanae-cv.pdf" download class="btn-cv">Télécharger mon CV</a>
+        <div class="reseaux-sociaux">
+          <a href="https://www.facebook.com/profile.php?id=61554043500844" target="_blank"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.instagram.com/janate123723?igsh=bXR0dWMycmZyM3Uy" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://github.com/dashboard" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="mailto:sanaeahjoub19@gmail.com" target="_blank"><i class="fab fa-gmail"></i></a>
+        </div>
+      </div>
+      <div class="photo">
+        <img src="IMAGES/1736466721271.jpg" alt="Sanae Ahjoub">
+      </div>
+    </div>
+  </section>
+  <section id="apropos">
+    <h2>À propos de moi</h2>
+    <p>
+        Je suis une développeuse passionné par la création de solutions innovantes et efficaces. Avec une solide expérience dans le développement web et mobile, je m'efforce de concevoir des applications qui allient performance, design et convivialité. Toujours à l'affût des dernières technologies, j'aime relever de nouveaux défis et apprendre en permanence pour améliorer mes compétences. Mon objectif est de contribuer à des projets qui ont un impact positif et de collaborer avec des équipes dynamiques pour atteindre des résultats exceptionnels.
+
+
+    </p>
+    <div class="competences">
+      <div class="competence">
+        <i class="fab fa-html5"></i>
+        <p>HTML</p>
+      </div>
+      <div class="competence">
+        <i class="fab fa-css3-alt"></i>
+        <p>CSS</p>
+      </div>
+      <div class="competence">
+        <i class="fab fa-js"></i>
+        <p>JavaScript</p>
+      </div>
+    </div>
+  </section>
+  <section id="projets">
+    <h2>Mes Projets</h2>
+    <div class="projets-grid">
+      <div class="projet">
+        <img src="IMAGES/image.png" alt="Calculatrice en JS">
+        <div class="projet-info">
+          <h3>Calculatrice en JS</h3>
+          <p>Une calculatrice interactive développée en JavaScript.</p>
+          <a href="#" class="btn-projet">Voir plus</a>
+        </div>
+      </div>
+      <div class="projet">
+        <img src="IMAGES/Gestion_du_temps_pour_les_retardataires___un_guide_humoristique_pour_se_detendre.jpg" alt="Gestion de tâches en JS">
+        <div class="projet-info">
+          <h3>Gestion de tâches en JS</h3>
+          <p>Une application de gestion de tâches en JavaScript.</p>
+          <a href="#" class="btn-projet">Voir plus</a>
+        </div>
+      </div>
+      <div class="projet">
+        <img src="IMAGES/992da1f1-ff2e-4b63-b76a-e627adda7d4f.jpg" alt="Gestion de produits en JS">
+        <div class="projet-info">
+          <h3>Gestion de produits en JS</h3>
+          <p>Une application de gestion de produits en JavaScript.</p>
+          <a href="#" class="btn-projet">Voir plus</a>
+        </div>
+      </div>
+      <div class="projet">
+        <img src="image.png" alt="Design d'un hôtel en HTML/CSS">
+        <div class="projet-info">
+          <h3>Design d'un hôtel en HTML/CSS</h3>
+          <p>Un design moderne pour un site d'hôtel.</p>
+          <a href="#" class="btn-projet">Voir plus</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact-content">
+      <p>Vous avez un projet en tête ? Contactez-moi !</p>
+      <form id="formulaire-contact">
+        <input type="text" id="nom" placeholder="Votre nom" required>
+        <input type="email" id="email" placeholder="Votre email" required>
+        <textarea id="message" placeholder="Votre message" required></textarea>
+        <button type="submit">Envoyer</button>
+      </form>
+      <p id="message-succes">Merci ! Votre message a été envoyé avec succès.</p>
+    </div>
+  </section>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
