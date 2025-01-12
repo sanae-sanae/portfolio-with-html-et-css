@@ -1,130 +1,288 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio - Sanae Ahjoub</title>
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <script src="bootstrap.min.js"></script>
+
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <nav>
-    <div class="logo">
-      <span class="sanae">Sanae</span>
-      <span class="ahjoub">Ahjoub</span>
-    </div>
-    <div class="menu-icon" id="menu-icon">
-      <i class="fas fa-bars"></i> 
-    </div>
-    <ul class="nav-links" id="nav-links">
-      <li><a href="#accueil">Accueil</a></li>
-      <li><a href="#apropos">À propos</a></li>  
-      <li><a href="#projets">Projets</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <div class="mode-toggle" id="mode-toggle">
-      <i class="fas fa-moon"></i> 
+  <div id="preloader">
+    <img src="IMAGES/loading.gif" alt="Loading..." width="100%">
+  </div>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#"><span class="text-primary">Sanae</span> Ahjoub</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#accueil">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link" href="#apropos">À propos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projets">Projets</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+        <button class="btn btn-outline-dark ms-3" id="mode-toggle"><i class="fas fa-moon"></i></button>
+      </div>
     </div>
   </nav>
-  <section id="accueil">
-    <div class="accueil-content">
-      <div class="texte">
-        <h1>
-          <span class="lettre">S</span>
-          <span class="lettre">a</span>
-          <span class="lettre">n</span>
-          <span class="lettre">a</span>
-          <span class="lettre">e</span>
-        </h1>
-        <p>Développeuse passionnée par le design 3D et l'innovation.</p>
-        <a href="#apropos" class="btn">En savoir plus</a>
-        <a href="cv/sanae-cv.pdf" download class="btn-cv">Télécharger mon CV</a>
-        <div class="reseaux-sociaux">
-          <a href="https://www.facebook.com/profile.php?id=61554043500844" target="_blank"><i class="fab fa-facebook"></i></a>
-          <a href="https://www.instagram.com/janate123723?igsh=bXR0dWMycmZyM3Uy" target="_blank"><i class="fab fa-instagram"></i></a>
-          <a href="https://github.com/dashboard" target="_blank"><i class="fab fa-github"></i></a>
-          <a href="mailto:sanaeahjoub19@gmail.com" target="_blank"><i class="fab fa-gmail"></i></a>
-        </div>
-      </div>
-      <div class="photo">
-        <img src="IMAGES/1736466721271.jpg" alt="Sanae Ahjoub">
-      </div>
-    </div>
-  </section>
-  <section id="apropos">
-    <h2>À propos de moi</h2>
-    <p>
-        Je suis une développeuse passionné par la création de solutions innovantes et efficaces. Avec une solide expérience dans le développement web et mobile, je m'efforce de concevoir des applications qui allient performance, design et convivialité. Toujours à l'affût des dernières technologies, j'aime relever de nouveaux défis et apprendre en permanence pour améliorer mes compétences. Mon objectif est de contribuer à des projets qui ont un impact positif et de collaborer avec des équipes dynamiques pour atteindre des résultats exceptionnels.
+  
 
+  <header id="accueil" class="bg-light py-5 text-center">
+    <div class="container">
+      <img src="IMAGES/me.jpg" alt="Sanae Ahjoub" class="rounded-circle mb-3" style="width: 150px; height: 150px; object-fit: cover;">
+      <h1 class="display-4 fw-bold">Sanae Ahjoub</h1>
+      <p class="lead">Développeuse passionnée par le design 3D et l'innovation.</p>
+      <a href="#apropos" class="btn btn-primary btn-lg me-2">En savoir plus</a>
+      <a href="cv/sanae-cv.pdf" download class="btn btn-outline-secondary btn-lg">Télécharger mon CV</a>
+    </div>
+  </header>
 
-    </p>
-    <div class="competences">
-      <div class="competence">
-        <i class="fab fa-html5"></i>
-        <p>HTML</p>
-      </div>
-      <div class="competence">
-        <i class="fab fa-css3-alt"></i>
-        <p>CSS</p>
-      </div>
-      <div class="competence">
-        <i class="fab fa-js"></i>
-        <p>JavaScript</p>
+ 
+<section id="apropos" class="py-5"> <div class="container"> 
+  <h2 class="text-center mb-4">À Propos de Moi</h2> 
+  <div class="row justify-content-center"> 
+    <div class="col-md-2 text-center"> <svg width="120" height="120" class="circle-chart" viewBox="0 0 120 120"> 
+      <circle class="circle-background" cx="60" cy="60" r="50" stroke="#ddd" stroke-width="10" fill="none"></circle>
+       <circle class="circle-progress js-circle" cx="60" cy="60" r="50" stroke="#0d6efd" stroke-width="10" fill="none" stroke-dasharray="314" stroke-dashoffset="314" data-percentage="90"></circle> <text x="60" y="60" text-anchor="middle" stroke="#0d6efd" stroke-width="1px" dy=".3em" class="circle-text">0%</text> </svg> <h5>JavaScript</h5> </div> 
+       <div class="col-md-2 text-center"> <svg width="120" height="120" class="circle-chart" viewBox="0 0 120 120"> 
+        <circle class="circle-background" cx="60" cy="60" r="50" stroke="#ddd" stroke-width="10" fill="none"></circle>
+         <circle class="circle-progress css-circle" cx="60" cy="60" r="50" stroke="#28a745" stroke-width="10" fill="none" stroke-dasharray="314" stroke-dashoffset="314" data-percentage="80"></circle> <text x="60" y="60" text-anchor="middle" stroke="#28a745" stroke-width="1px" dy=".3em" class="circle-text">0%</text> </svg> <h5>CSS</h5> </div>
+          <div class="col-md-2 text-center"> <svg width="120" height="120" class="circle-chart" viewBox="0 0 120 120">
+             <circle class="circle-background" cx="60" cy="60" r="50" stroke="#ddd" stroke-width="10" fill="none"></circle> 
+             <circle class="circle-progress html-circle" cx="60" cy="60" r="50" stroke="#ffc107" stroke-width="10" fill="none" stroke-dasharray="314" stroke-dashoffset="314" data-percentage="95"></circle> <text x="60" y="60" text-anchor="middle" stroke="#ffc107" stroke-width="1px" dy=".3em" class="circle-text">0%</text> </svg> <h5>HTML</h5> </div>
+              <div class="col-md-2 text-center"> 
+              <svg width="120" height="120" class="circle-chart" viewBox="0 0 120 120">
+                 <circle class="circle-background" cx="60" cy="60" r="50" stroke="#ddd" stroke-width="10" fill="none"></circle> 
+                <circle class="circle-progress jq-circle" cx="60" cy="60" r="50" stroke="#17a2b8" stroke-width="10" fill="none" stroke-dasharray="314" stroke-dashoffset="314" data-percentage="85"></circle> 
+                <text x="60" y="60" text-anchor="middle" stroke="#17a2b8" stroke-width="1px" dy=".3em" class="circle-text">0%</text> </svg> <h5>jQuery</h5> </div> <div class="col-md-2 text-center"> 
+                  <svg width="120" height="120" class="circle-chart" viewBox="0 0 120 120"> <circle class="circle-background" cx="60" cy="60" r="50" stroke="#ddd" stroke-width="10" fill="none"></circle> 
+              <circle class="circle-progress bs-circle" cx="60" cy="60" r="50" stroke="#6610f2" stroke-width="10" fill="none" stroke-dasharray="314" stroke-dashoffset="314" data-percentage="80"></circle> <text x="60" y="60" text-anchor="middle" stroke="#6610f2" stroke-width="1px" dy=".3em" class="circle-text">0%</text> </svg> <h5>Bootstrap</h5> </div> </div>
+              </div></section>
+  <section id="projets" class="bg-light py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Mes Projets</h2>
+      <div class="row">
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card">
+            <img src="IMAGES/image.png" class="card-img-top" alt="Calculatrice en JS">
+            <div class="card-body">
+              <h5 class="card-title">Calculatrice en JS</h5>
+              <p class="card-text">Une calculatrice interactive développée en JavaScript.</p>
+              <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#projectModal1">Voir plus</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card">
+            <img src="IMAGES/Gestion_du_temps_pour_les_retardataires___un_guide_humoristique_pour_se_detendre.jpg" class="card-img-top" alt="Gestion de tâches en JS">
+            <div class="card-body">
+              <h5 class="card-title">Gestion de tâches en JS</h5>
+              <p class="card-text">Une application de gestion de tâches en JavaScript.</p>
+              <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#projectModal2">Voir plus</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card">
+            <img src="IMAGES/992da1f1-ff2e-4b63-b76a-e627adda7d4f.jpg" class="card-img-top" alt="Gestion de produits en JS">
+            <div class="card-body">
+              <h5 class="card-title">Gestion de produits en JS</h5>
+              <p class="card-text">Une application de gestion de produits en JavaScript.</p>
+              <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#projectModal3">Voir plus</a>
+
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
-  <section id="projets">
-    <h2>Mes Projets</h2>
-    <div class="projets-grid">
-      <div class="projet">
-        <img src="IMAGES/image.png" alt="Calculatrice en JS">
-        <div class="projet-info">
-          <h3>Calculatrice en JS</h3>
-          <p>Une calculatrice interactive développée en JavaScript.</p>
-          <a href="#" class="btn-projet">Voir plus</a>
+
+  <section id="contact" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Contact</h2>
+      <p class="text-center mb-4">Vous avez un projet en tête ? Contactez-moi !</p>
+      <form id="formulaire-contact" class="row g-3 justify-content-center">
+        <div class="col-md-6">
+          <input type="text" class="form-control" id="nom" placeholder="Votre nom" required>
         </div>
-      </div>
-      <div class="projet">
-        <img src="IMAGES/Gestion_du_temps_pour_les_retardataires___un_guide_humoristique_pour_se_detendre.jpg" alt="Gestion de tâches en JS">
-        <div class="projet-info">
-          <h3>Gestion de tâches en JS</h3>
-          <p>Une application de gestion de tâches en JavaScript.</p>
-          <a href="#" class="btn-projet">Voir plus</a>
+        <div class="col-md-6">
+          <input type="email" class="form-control" id="email" placeholder="Votre email" required>
         </div>
-      </div>
-      <div class="projet">
-        <img src="IMAGES/992da1f1-ff2e-4b63-b76a-e627adda7d4f.jpg" alt="Gestion de produits en JS">
-        <div class="projet-info">
-          <h3>Gestion de produits en JS</h3>
-          <p>Une application de gestion de produits en JavaScript.</p>
-          <a href="#" class="btn-projet">Voir plus</a>
+        <div class="col-12">
+          <textarea class="form-control" id="message" rows="4" placeholder="Votre message" required></textarea>
         </div>
-      </div>
-      <div class="projet">
-        <img src="image.png" alt="Design d'un hôtel en HTML/CSS">
-        <div class="projet-info">
-          <h3>Design d'un hôtel en HTML/CSS</h3>
-          <p>Un design moderne pour un site d'hôtel.</p>
-          <a href="#" class="btn-projet">Voir plus</a>
+        <div class="col-12 text-center">
+          <button type="submit" class="btn btn-primary">Envoyer</button>
         </div>
-      </div>
-    </div>
-  </section>
-  <section id="contact">
-    <h2>Contact</h2>
-    <div class="contact-content">
-      <p>Vous avez un projet en tête ? Contactez-moi !</p>
-      <form id="formulaire-contact">
-        <input type="text" id="nom" placeholder="Votre nom" required>
-        <input type="email" id="email" placeholder="Votre email" required>
-        <textarea id="message" placeholder="Votre message" required></textarea>
-        <button type="submit">Envoyer</button>
+        <p id="message-succes" class="text-success text-center mt-3" style="display: none;">Merci ! Votre message a été envoyé avec succès.</p>
       </form>
-      <p id="message-succes">Merci ! Votre message a été envoyé avec succès.</p>
     </div>
   </section>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="script.js"></script>
+
+
+
+
+
+<!-- Modal 1 -->
+<div class="modal fade" id="projectModal1" tabindex="-1" aria-labelledby="projectModal1Label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="projectModal1Label">Calculatrice en JS</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <img src="IMAGES/image.png" alt="Calculatrice en JS" class="img-fluid mb-3">
+        <p>Une calculatrice interactive développée en JavaScript. Ce projet a pour objectif d’offrir une interface utilisateur simple et fonctionnelle pour effectuer des calculs basiques.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 2 -->
+<div class="modal fade" id="projectModal2" tabindex="-1" aria-labelledby="projectModal2Label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="projectModal2Label">Gestion de tâches en JS</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <img src="IMAGES/Gestion_du_temps_pour_les_retardataires___un_guide_humoristique_pour_se_detendre.jpg" alt="Gestion de tâches en JS" class="img-fluid mb-3">
+        <p>Une application de gestion de tâches en JavaScript, permettant d’ajouter, de supprimer et de suivre les tâches à accomplir de manière simple.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 3 -->
+<div class="modal fade" id="projectModal3" tabindex="-1" aria-labelledby="projectModal3Label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="projectModal3Label">Gestion de produits en JS</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <img src="IMAGES/992da1f1-ff2e-4b63-b76a-e627adda7d4f.jpg" alt="Gestion de produits en JS" class="img-fluid mb-3">
+        <p>Une application de gestion de produits, permettant d’ajouter des produits, de les visualiser et de les modifier.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<button id="scrollToTopBtn" class="btn btn-primary rounded-circle" style="position: fixed; bottom: 20px; right: 20px; display: none;">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+  <footer class="bg-dark text-white py-4">
+    <div class="container text-center">
+      <p>&copy; 2025 Sanae Ahjoub. Tous droits réservés.</p>
+      <p>Conçu avec ❤️ par Sanae Ahjoub</p>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+
+
+
+
+  <script>
+    
+    $(document).ready(function() {
+      $(document).ready(function() {
+
+    
+
+
+        $('#preloader').fadeOut(1500, function () {
+          $('body').fadeIn(1500).css('visibility', 'visible').fadeIn(1500);;
+        });
+      });
+
+      $('a[href^="#"]').on('click', function(event) {
+        const target = $(this.getAttribute('href'));
+        if (target.length) {
+          event.preventDefault();
+          $('html, body').stop().animate({
+            scrollTop: target.offset().top - 70
+          }, 1000);
+        }
+      });
+      $(window).on('scroll', function() { if ($(window).scrollTop() >= $('#apropos').offset().top - $(window).height()) { $('.circle-progress').each(function() { var percentage = $(this).data('percentage'); var circumference = 2 * Math.PI * 50; // r = 50 
+      var offset = circumference - (percentage / 100) * circumference; $(this).css('stroke-dashoffset', offset); $(this).siblings('.circle-text').text(percentage + '%'); 
+      $(this).css('stroke', $(this).hasClass('js-circle') ? '#1e90ff' : $(this).hasClass('css-circle') ? '#20c997' : $(this).hasClass('html-circle') ? '#ff5733' : $(this).hasClass('jq-circle') ? '#ffc107' : $(this).hasClass('bs-circle') ? '#6f42c1' : '#333'); }); } });
+
+      $(window).scroll(function() {
+      if ($(this).scrollTop() > 300) {
+        $('#scrollToTopBtn').fadeIn();
+      } else {
+        $('#scrollToTopBtn').fadeOut();
+      }
+    });
+
+    $('#scrollToTopBtn').click(function() {
+      $('html, body').animate({ scrollTop: 0 }, 800); 
+      return false;
+    });
+
+
+      $('#mode-toggle').on('click', function() {
+        $('body').toggleClass('bg-dark');
+        $('div').toggleClass('bg-dark');
+        $('section').toggleClass('bg-dark');
+        $('nav').toggleClass('bg-dark');
+        $('header').toggleClass('bg-dark');
+      
+      });
+
+      $('#formulaire-contact').on('submit', function(event) {
+        event.preventDefault();
+        $('#message-succes').fadeIn().delay(3000).fadeOut();
+        this.reset();
+      });
+
+
+ $('a.btn-primary').on('click', function(e) {
+    e.preventDefault();
+    var card = $(this).closest('.card');
+    var title = card.find('.card-title').text();
+    var imageSrc = card.find('img').attr('src');
+    var description = card.find('.card-text').text();
+
+    $('#projectModalLabel').text(title);
+    $('#modalImage').attr('src', imageSrc);
+    $('#modalDescription').text(description);
+
+    $('#projectModal').modal('show');
+  });
+
+
+    });
+  </script>
 </body>
 </html>

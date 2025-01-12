@@ -1,39 +1,57 @@
+// Percentage values for each language
+const percentages = {
+  javascript: 90,
+  css: 80,
+  html: 85,
+  jquery: 70,
+  bootstrap: 75,
+  c_language: 60,
+};
 
-document.getElementById('menu-icon').addEventListener('click', function () {
-    const navLinks = document.getElementById('nav-links');
-    navLinks.classList.toggle('active');
-  });
-  document.addEventListener('click', function (event) {
-    const navLinks = document.getElementById('nav-links');
-    const menuIcon = document.getElementById('menu-icon');
-  
-    if (!event.target.matches('.menu-icon, .menu-icon *') && !event.target.matches('.nav-links, .nav-links *')) {
-      navLinks.classList.remove('active');
+// Function to animate the circle
+function animateCircle(circle, percentage) {
+  console.log("Animating circle for percentage: " + percentage); // Debugging line
+  const radius = circle.querySelector('.circle-progress').r.baseVal.value;
+  const circumference = 2 * Math.PI * radius;
+  const offset = circumference - (percentage / 100) * circumference;
+
+  console.log("Calculated offset: " + offset); // Debugging line
+
+  // Animate the circle
+  circle.querySelector('.circle-progress').style.strokeDashoffset = offset;
+  circle.querySelector('.circle-text').textContent = `${percentage}%`;
+}
+
+// IntersectionObserver to observe when circles come into the viewport
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const circle = entry.target;
+      const language = circle.querySelector('h5').textContent.toLowerCase().replace(/\s+/g, '_');
+      const percentage = percentages[language];  // Fetch the percentage for the language
+
+      if (percentage !== undefined) {
+        animateCircle(circle, percentage);  // Call animateCircle with the correct percentage
+      }
+      
+      observer.unobserve(circle);  // Stop observing the circle after it becomes visible
     }
   });
-  const modeToggle = document.getElementById('mode-toggle');
-  const body = document.body;
-  
-  modeToggle.addEventListener('click', function () {
-    body.classList.toggle('mode-clair');
-    const icon = modeToggle.querySelector('i');
-    if (body.classList.contains('mode-clair')) {
-      icon.classList.remove('fa-moon');
-      icon.classList.add('fa-sun');
-    } else {
-      icon.classList.remove('fa-sun');
-      icon.classList.add('fa-moon');
-    }
+}, {
+  threshold: 0.5,  // Trigger when 50% of the circle is visible
+});
+
+// Select all circle elements and observe them
+document.querySelectorAll('.circle-chart').forEach(circle => {
+  observer.observe(circle);
+});
+
+// Optional: Code for handling the button click event (modal functionality)
+document.querySelectorAll('.btn-primary').forEach(button => {
+  button.addEventListener('click', function(event) {
+    event.preventDefault(); 
+    const targetModal = this.getAttribute('data-bs-target'); 
+    const modal = new bootstrap.Modal(document.querySelector(targetModal)); 
+    modal.show(); 
   });
-  
-  $('#formulaire-contact').on('submit', function (e) {
-    e.preventDefault(); 
-    const nom = $('#nom').val();
-    const email = $('#email').val();
-    const message = $('#message').val();
-    console.log('Nom:', nom);
-    console.log('Email:', email);
-    console.log('Message:', message);
-    $('#message-succes').text('Merci, ' + nom + ' ! Votre message a été envoyé avec succès.').fadeIn().delay(3000).fadeOut();
-    $(this).trigger('reset');
-  });
+});
